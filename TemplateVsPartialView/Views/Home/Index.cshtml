@@ -1,0 +1,21 @@
+﻿@model TemplateVsPartialView.Models.Parent
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Editor Template vs Partial View</h1>
+    <p class="lead">View the generated source to compate both method to display input.</p>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Editor For</h2>
+        @Html.EditorFor(d=>d)
+    </div>
+    <div class="col-sm-6">
+        <h2>Partial View</h2>
+        @Html.Partial("_parentPartialView", Model)
+    </div>
+</div>
